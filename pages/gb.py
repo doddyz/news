@@ -1,14 +1,13 @@
 import streamlit as st
-from tmp import *
+from fun import *
 
-# st.markdown('## World News')
-# st.markdown('### BBC')
-# st.markdown('[Ukraine war crisis going on](https://www.bbc.co.uk)')
+
+page_lang = 'en-GB'
 
 # Preselect World topic
 topic = st.sidebar.selectbox('News topic', sorted(list(TOPIC_IDS.keys())), 2)
 
-feed = feedparser.parse(create_google_news_topic_rss_url(topic))
+feed = feedparser.parse(create_google_news_topic_rss_url(topic, page_lang))
 
 sources = get_feed_available_sources(feed)
 
