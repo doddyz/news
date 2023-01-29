@@ -1,8 +1,6 @@
-# Resolve Sources selection issue: either with checkbox or else as variables in bg
+# Translate topics for each language page, using local terminology + country replacement for local country news
 # See how to integrate sub topics cleanly, either as extra options in the topics selector. Create a tabbed approach if pages don't work well
-# Make all pages show same widgets, search for all etc...
-# Redirect to fr page by default or hide homepage 
-
+# Explore other types of RSS sources like https://searchengineland.com/feed
 
 import feedparser
 import streamlit as st
@@ -15,7 +13,9 @@ BASE_RSS_SEARCH_URL = 'https://news.google.com/rss/search?q='
 
 PREFERRED_SOURCES = {
 
-    'gb': ['BBC', 'The Guardian', 'The Independent', 'Evening Standard']
+    'fr-FR': ['Le Monde', 'Le Parisien', 'France Culture', 'Ouest-France', 'L\'Équipe'],
+    'es-ES': ['EL PAÍS', 'El Mundo', 'La Vanguardia', 'MARCA.com'],
+    'en-GB': ['BBC', 'The Guardian', 'The Independent', 'Evening Standard']
     
 }
 
